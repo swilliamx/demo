@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_eip" "ip-staging" {
-  instance = "{aws_instance.demo-ec2-instance.id}"
+  instance = "{aws_instance.staging-ec2-instance.id}"
   vpc      = true
 }
 
@@ -21,6 +21,6 @@ resource "aws_instance" "terraform-staging" {
   key_name        = "staging-key"
   count           = 1 # create four similar EC2 instances
   tags = {
-    Name = "ec2-staging-${count.index + 1}.xpaceform.com"
+    Name = "ec2-staging-${count.index + 1},example.com"
   }
 }
