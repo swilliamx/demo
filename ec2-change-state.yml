@@ -8,9 +8,9 @@
   tasks:
     - name: Change instances state by tag
       ec2:
-        aws_access_key: "AKIAVMLOCZTFONT3GK6I"
-        aws_secret_key: "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"
+        aws_access_key: ""
+        aws_secret_key: ""
         ec2_region: "us-east-1"
         state: stopped # Instance state format: running stopped restarted terminated
         instance_tags:
-          Name: ec2-training-1.sunkloud.com
+          Name: ec2-training-1.xpaceform.com
