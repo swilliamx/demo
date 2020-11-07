@@ -13,4 +13,4 @@
         ec2_region: "us-east-1"
         state: stopped # Instance state format: running stopped restarted terminated
         instance_tags:
-          Name: ec2-training-1.xpaceform.com
+          Name: ec2-staging-1.example.com
