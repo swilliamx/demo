@@ -10,7 +10,7 @@ resource "aws_eip" "ip-staging" {
 }
 
 resource "aws_key_pair" "staging" {
-  key_name   = "demo-key"
+  key_name   = "staging-key"
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
