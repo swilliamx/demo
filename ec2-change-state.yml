@@ -1,0 +1,16 @@
+---
+
+- name: Change instances state by tag
+  hosts: localhost
+  gather_facts: yes
+  # vars_files:
+  #  - keys.yml
+  tasks:
+    - name: Change instances state by tag
+      ec2:
+        aws_access_key: "AKIAVMLOCZTFONT3GK6I"
+        aws_secret_key: "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"
+        ec2_region: "us-east-1"
+        state: stopped # Instance state format: running stopped restarted terminated
+        instance_tags:
+          Name: ec2-training-1.sunkloud.com
