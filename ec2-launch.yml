@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Provision instance        
+      ec2:
+        ec2_region: "{{ AWS_REGION }}"
+        instance_type: t2.micro       
+        keypair: demo-key
+        image: ami-0c94855ba95c71c99  
+        assign_public_ip: yes
+        vpc_subnet_id: subnet-1415bf35
+        group: demo-SG
+        wait: true
+        exact_count: 1
+        count_tag: 
+          Name: demo.example.com      
+        instance_tags:
+          Name: demo.example.com      
+      register: ec2
+    - debug:
+        var: ec2
