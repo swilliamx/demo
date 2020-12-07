@@ -13,4 +13,4 @@
         ec2_region: "{{ AWS_REGION }}"
         state: stopped
         instance_tags:
-          Name: ec2-lab-1.example.com
+          Name: ec2-demo-1.example.com
